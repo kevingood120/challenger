@@ -1,0 +1,55 @@
+.btn {
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: $color-success;
+    color: white;
+
+    &:hover {
+        background-color: darken($color: $color-success, $amount: 10);
+    }
+
+    &:active {
+        background-color: darken($color: $color-success, $amount: 15);
+    }
+}
+
+.btn-info {
+    background-color: $color-info;
+    color: white;
+
+    &:hover {
+        background-color: darken($color: $color-info, $amount: 10);
+    }
+
+    &:active {
+        background-color: darken($color: $color-info, $amount: 15);
+    }
+}
+
+.btn.circle {
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 24px;
+    display: flex;
+    color: #F4F4F4;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(#000,.3);
+    }
+
+    &:active {
+        background-color: rgba(#000,.5);
+    }
+}

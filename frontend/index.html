@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/styles/main.css">
+    <title>Tabela Médico</title>
+</head>
+<body>
+    <header class="header">
+        Médico
+    </header>
+    <div class="container">
+        <div class="paper">
+            <div class="table-responsive">
+                <table class="table" id="tblMedic">
+                    <thead>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <button id="btnAdd" class="btn btn-info">Adicionar</button>
+    </div>
+    
+    <div class="backdrop">
+        <div class="modal">
+            <div class="modal-title">
+                <h3>Formulário</h3>
+                <button id="btnCloseModal" class="btn circle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMedic">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container-input">
+                                <div class="form-group">
+
+                                    <input name="name" class="form-control" placeholder=" "  type="text">
+                                    <label>Nome</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input name="phone" data-mask="(00) 0000-0000" class="form-control" placeholder=" "  type="text">
+                                    <label>Telefone</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="container-input">
+                                <div class="form-group"> 
+                                    <input name="cellPhone" data-mask="(00) 00000-0000" class="form-control" placeholder=" "  type="text">
+                                    <label>Celular</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <select name="specialties" class="form-control" multiple></select>
+                                    <label>Especialidades</label>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input name="crm" data-mask="00.000.00" class="form-control" placeholder=" "  type="text">
+                                    <label>CRM</label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input name="zipcode" data-mask="00000-000" class="form-control" placeholder=" "  type="text">
+                                    <label>CEP</label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-9">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input tabindex="-1" name="street" class="form-control" placeholder=" "  type="text">
+                                    <label>Endereço</label>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input name="addressNumber" class="form-control" placeholder=" "  type="text">
+                                    <label>Número</label>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-5">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input tabindex="-1" name="neighborhood" class="form-control" placeholder=" "  type="text">
+                                    <label>Bairro</label>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-5">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input tabindex="-1" name="city" class="form-control" placeholder=" "  type="text">
+                                    <label>Cidade</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input tabindex="-1" name="state" class="form-control" placeholder=" "  type="text">
+                                    <label>UF</label>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="container-input">
+                                <div class="form-group">
+                                    <input name="complement" class="form-control" placeholder=" " type="text">
+                                    <label>Complemento</label>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="dist/scripts/http.js"></script>
+    <script src="dist/scripts/medic-table.js"></script>
+</body>
+</html>

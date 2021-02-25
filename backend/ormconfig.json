@@ -1,0 +1,12 @@
+{
+    "type": "mysql",
+    "host": "db",
+    "port": 3306,
+    "username": "root",
+    "password": "123456",
+    "database": "hospitalApp",
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "synchronize": false,
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrationsRun": true
+  }

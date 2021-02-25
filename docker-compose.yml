@@ -1,0 +1,42 @@
+services:
+  db:
+    build: ./database
+    ports:
+     - 3306:3306
+    container_name: mariadb-back
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: root
+      MYSQL_HOST: 0.0.0.0
+      MYSQL_DATABASE: hospitalApp
+    restart: on-failure
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - core_service_network   
+  backend:
+    build: ./backend
+    container_name: backend-kevin
+    ports:
+     - 3050:3050
+    networks:
+      - core_service_network
+  frontend:
+    build: ./frontend
+    container_name: frontend-kevin
+    ports:
+     - 8080:8080
+    networks:
+      - core_service_network
+
+
+networks:
+  core_service_network:
+    driver: bridge
+    name: core_service_network
+
+volumes:
+  mysql_data:
+    name: kevin_data
+
+    

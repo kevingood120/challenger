@@ -1,0 +1,30 @@
+.table-responsive {
+    overflow-y: auto;
+
+    .table {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .table, td, th {
+        border-collapse: collapse;
+        padding: 10px
+    }
+
+    td, th {
+        height: 48px;
+        color: rgba(0,0,0,.87);
+    }
+
+    tr {
+        border-bottom: 1px solid rgba(#000,.1)
+    }
+
+    tfoot .pagination {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
